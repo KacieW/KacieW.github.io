@@ -1,8 +1,78 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shiyuan Portfolio</title>
+  <!--Bootstrap-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href='style.css' rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src='app.js'></script>
+</head>
+
 <body>
-<h1>Hello Github</h1>
-<p>Github pages</P>
-  <p><a href="newpage.html">New page link</a></p>
+  <nav id="menu" role="navigation" class="navbar">
+    <div class="container-fluid menu">
+      <div class="navbar-header col-xs-12">
+        <button type='button' class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a class='logo' id='logo' href="index.html">Shiyuan</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-list-item"><a href="index.html">Home</a></li>
+          <li class="nav-list-item"><a href="project.html">Project</a></li>
+          <li class="nav-list-item"><a href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row main-row" id='main-section'>
+      <div class="col-xs-12 col-md-7">
+        <img src="C:\Users\Yuanyuan\Desktop\Profile-photo\IMG_1876.jpg" id='main-img' class="img-thumbnail">
+      </div>
+      <div class='col-xs-12 col-md-5' id='p-section'>
+        <p>Hello, I am a frontend developer based in San Fransico Bay Area. I have passion to create neat and clean websites.
+        </p>
+        <p>Find my previous work exprience on <a href="https://www.linkedin.com/in/shiyuan-wang-64a01164/">LinkedIn</a>.</p>
+        <p>Find me here:
+          <a href=""><i class="fa fa-github" aria-hidden="true"></i></a>
+          <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        </p>
+        <button class="btn btn-default center-block" id='project-btn'><a href='project.html'>Check My Projects</a></button>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row sub-section">
+      <h3>Wanna do awesome projects together?</h3>
+      <button class="btn btn-default btn-lg center-block " id='email-btn'><a href='mailto:shiyuan2011@knights.ucf.edu'>Email Me</a></button>
+    </div>
+  </div>
+
+  <footer id="footer-row">
+    <div class='container'>
+      <div class="row">
+        <p id='footer-p'>&copy; Shiyuan Wang 2017</p>
+      </div>
+    </div>
+  </footer>
+  </div>
+  <!-- container-fluid -->
 </body>
+
 </html>
