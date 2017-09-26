@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="book-style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="book-app.js"></script>
+
+</head>
+
+<body ng-app="bookStore">
+  <div id="bookApp" ng-controller="bookStoreController as bookStore">
+    <h1 id='h1Booklist'>Booklist of Javascript</h1>
+    <div id="bookItem" ng-repeat="book in bookStore.book">
+      <h2 id="bookTitle">{{book.title}}</h2>
+
+      <p>by <span id="bookAuthor">{{book.author}}</span></p>
+      <h2>Price: <span id="bookPrice">{{book.price | currency}}</span></h2>
+      <section class="tab" ng-controller="tabController as tab">
+        <ul class="nav nav-pills">
+          <li ng-class="{ active: tab.isSet(1) }">
+            <a href ng-click="tab.setTab(1)">Description</a>
+          </li>
+          <li ng-class="{active:tab.isSet(2)}">
+            <a href ng-click="tab.setTab(2)">Reviews</a>
+          </li>
+        </ul>
+        <div ng-show="tab.isSet(1)" id="tab1">
+          <h4>Description</h4>
+          <p>{{book.description}}</p>
+        </div>
+        <div ng-show="tab.isSet(2)" id="tab2">
+          <h4 id="reviewPreview">Reviews</h4>
+          <ul class="reviews">
+            <li ng-repeat="review in book.reviews" class="review-item">
+              <p><strong>{{review.stars}} stars</strong> <span id="createDate">{{review.createdOn | date}}</span></p>
+							<p><strong>Author: </strong>{{review.author}} </p>
+							<p><strong>Comments:</strong> {{review.comments}}</p>
+            </li>
+          </ul>
+
+          <h4 id="reviewform">Submit your reviews</h4>
+          <div ng-controller="reviewController">
+            <form name="reviewForm" class="form-group" ng-submit="reviewForm.$valid && addReview(book)">
+              <p><strong>{{review.stars}}</strong></p>
+              <p>{{review.author}}</p>
+              <p>{{review.comments}}</p>
+              <select ng-model="review.stars" class="form-select" ng-options="stars for stars in ['5 Stars', '4 Stars','3 Stars','2 Stars','1 Stars']" required>
+                <option value="">Rate the book</option>
+              </select>
+              <input ng-model="review.author" type="email" class="form-email" placeholder="Your email" required>
+              <textarea ng-model="review.comments" ng-maxlength="100" class="form-review" rows="4" cols="50" placeholder="Write your reviews"></textarea>
+              <input type="submit" class="form-button" value="Submit">
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
