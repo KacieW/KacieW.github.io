@@ -16,6 +16,65 @@ body {
   padding: 0;
 }
 
+.centerForm{
+    position:absolute;
+    width: 100%;
+
+}
+.loginForm, .signinForm{
+  box-shadow:  0px 0px 0px 9999px rgba(0, 0, 0, 0.8);
+  line-height: 25px;
+  display: block;
+  box-sizing: border-box;
+  width: 26%;
+  margin:0 auto 16px auto;
+  padding: 18px;
+  color: #292F36;
+  background-color: rgba(74,87,89, 0.7);
+}
+
+.showloginbox, .showsignupbox{
+  display: none;
+}
+form input{
+  display: block;
+  width: 100%;
+  margin-bottom: 3px;
+  padding-left: 8px;
+  border: 1px solid white;
+}
+form input:focus {
+  border: 1px solid #FF9505;
+  outline: none;
+}
+form label{
+  color: white;
+}
+#passwordrule{
+  color:#555;
+  font-size:10px;
+}
+.signup, .login {
+  width: 100%;
+  height: 36px;
+  background-color: transparent;
+  border: 1px solid #FF7E6B;
+  color: #FF7E6B;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+.login:hover, .signup:hover {
+  background-color: #FF7E6B;
+  color: #F4F1DE;
+  border: none;
+}
+
+
+form .error {
+color: #ff0000;
+}
 .bigImg {
   height: 100%;
   width: 100%;
@@ -193,19 +252,7 @@ a {
   padding: 15px 15px 0 15px;
 }
 
-form input {
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 16px;
-  color: #292F36;
-}
 
-form input:focus {
-  border: 1px solid #FF9505;
-  outline: none;
-}
 
 #trySignup {
   float: right;
@@ -223,38 +270,7 @@ form input:focus {
   color: #FF7E6B;
 }
 
-.login {
-  width: 37%;
-  height: 36px;
-  margin-top: 5px;
-  display: inline-block;
-  background-color: transparent;
-  border: 1px solid #FF7E6B;
-  color: #FF7E6B;
-  font-size: 16px;
-  font-weight: bold;
 
-}
-#passwordrule{
-  color:#555;
-  font-size:10px;
-}
-.signup, .login {
-  width: 100%;
-  height: 36px;
-  background-color: transparent;
-  border: 1px solid #FF7E6B;
-  color: #FF7E6B;
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 2px;
-}
-
-.login:hover, .signup:hover {
-  background-color: #FF7E6B;
-  color: #F4F1DE;
-  border: none;
-}
 
 #forgot {
   right: 0;
