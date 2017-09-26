@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz</title>
+  <link rel="stylesheet" href='style.css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+<div id="startPage">
+  <h1>Simple Quiz</h1>
+  <form id="loginForm" action="" autocomplete="off">
+    <input type="text" id="username" placeholder="User Name" autocomplete="off" required>
+    <input type="password" id="password" placeholder='Password' required>
+    <input type="submit" id="login" value="Login">
+  </form>
+  <div id="displayUserName"></div>
+  <button id="start">Start</button>
+</div>
+<div class="wrapper" id="wrapper">
+  <div class="questions" id="questions"></div>
+  <div class="choices">
+    <input type="radio" class="ch" id="1" name="option" value="0">
+    <label class="option-descript" for="1"></label>
+    <input type="radio" class="ch" id="2" name="option" value="1">
+    <label class="option-descript" for="2"></label>
+    <input type="radio" class="ch" id="3" name="option" value="2">
+    <label class="option-descript" for="3"></label>
+    <input type="radio" class="ch" id="4" name="option" value="3">
+    <label class="option-descript" for="4"></label>
+  </div>
+  <div class="btn">
+    <input type="button" id="prev" value="Previous">
+    <input type="button" id="next" value="Next">
+  </div>
+</div>
+<div id="resultPage">
+
+</div>
+</body>
+<script src='app.js'></script>
+</html>
