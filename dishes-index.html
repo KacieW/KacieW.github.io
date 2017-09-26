@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+  <title>Food Home page</title>
+  <link href="dishes-style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="container-fluid bigImg">
+    <div class="bg"></div>
+  </div>
+  <nav id="menu" role="navigation" class="navbar">
+    <div class="container-fluid menu">
+      <div class="navbar-header">
+        <button type='button' class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="dishes-index.html">Home</a></li>
+          <li><a href="dishes-breakfast.html">Dishes</a></li>
+          <li><a href="dishes-yourRecipe.html">Your Recipes</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a id="login-button" class="login-button" role="button" data-toggle="modal" data-target="#login-modal" data-backdrop="static" data-controls-modal="login-modal">Login</a>
+          </li>
+          <li class="dropdown" id="signup">
+            <a id="signup-button" class="signup-button" role="button" data-toggle="modal" data-target="#signup-modal" data-backdrop="static" data-controls-modal="signup-modal">SignUp</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+  <div>
+    <div class="modal fade loginpopup index" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog login-form animated modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="loginForm" id="loginForm" action="">
+              <input type="email" id="email" placeholder="Email" required>
+              <input type="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn login" id="loginbtn">Login</button>
+            <!-- <div id="forgot"><a href="#" id="tryPassword">Forgot Password?</a> -->
+              <!-- <a href="#" id='trySignup'>SignUp</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="modal fade signuppopup index" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog signup-form animated modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="signinForm" id="signinForm" action="">
+              <input type="email" id="email" placeholder="Email" required>
+              <input type="text" id="username" placeholder="usesrname" required>
+              <input type="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" id="signupbtn" class="btn btn-primary signup">SignUp</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid main-section">
+    <div id='title'>Want To Cook</div>
+    <div id='subtitle'>Find favorate recipes! Share your masterpiece!</div>
+    <a href="dishes-breakfast.html" class="button" id="find-more">Find More</a>
+  </div>
+  <footer class="container-fluid">
+    <div class="row footerbar">
+      <p id='footer-p'>Redesigned by Kacie</p>
+      <p>Images are from <a href="https://www.xiachufang.com/">xiachufang.com</a></p>
+    </div>
+  </footer>
+
+
+  <script src="dishes-app.js"></script>
+  <script src="dishes-controller.js"></script>
+</body>
+
+</html>
