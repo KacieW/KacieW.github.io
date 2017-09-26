@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <link href="style.css" rel="stylesheet">
+  <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body>
+  <div id="map"></div>
+  <form id='searchform' onsubmit="return false;">
+    <h3 id="formTitle">Find your resturant</h3>
+    <div id='seachBar' class='form-group'>
+      <input class="form-control" id='inputSearch' autocomplete="off">
+      <ul id='itemList'>
+        <li class="item">Suppenkuche</li>
+        <li class="item">The Matterhorn Swiss</li>
+        <li class="item">Saison</li>
+        <li class="item">Red Tavern</li>
+        <li class="item">Cage Marika</li>
+        <li class="item">Leopold's</li>
+        <li class="item">Z &amp; Y Restaurant</li>
+        <li class="item">Lolinda</li>
+        <li class="item">Kusakabe</li>
+      </ul>
+    </div>
+  </form>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQA-V9x6g9MIm8m-0q6_4X7PQC7x5Ct5I&libraries=places&callback=initMap">
+  </script>
+</body>
+
+</html>
