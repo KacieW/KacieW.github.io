@@ -31,63 +31,34 @@
           <li><a href="dishes-yourRecipe.html">Your Recipes</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li class="dropdown">
-            <a id="login-button" class="login-button" role="button" data-toggle="modal" data-target="#login-modal" data-backdrop="static" data-controls-modal="login-modal">  Login</a>
+          <li class="dropdown" id="loginup">
+            <a id="login-button" class="login-button" role="button">Login</a>
           </li>
           <li class="dropdown" id="signup">
-            <a id="signup-button" class="signup-button" role="button" data-toggle="modal" data-target="#signup-modal" data-backdrop="static" data-controls-modal="signup-modal">SignUp</a>
+            <a id="signup-button" class="signup-button" role="button">SignUp</a>
           </li>
         </ul>
       </div>
   </nav>
-  <div>
-    <div class="modal fade loginpopup index" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog login-form animated modal-sm">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form class="loginForm" id="loginForm" action="">
-              <input type="email" id="email" placeholder="Email" required>
-              <input type="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn login" id="loginbtn">Login</button>
-            <!-- <div id="forgot"><a href="#" id="tryPassword">Forgot Password?</a><br>
-              <a href="#" id='trySignup'>SignUp</a>
-            </div> -->
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="centerForm" id="centerForm1">
+    <form name="registration1" class="loginForm showloginbox" id="loginForm" >
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="email">
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" placeholder="password">
+      <button type="submit" class="btn login" id="loginbtn">Login</button>
+    </form>
   </div>
-  <div>
-    <div class="modal fade signuppopup index" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog signup-form animated modal-sm">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form class="signinForm" id="signinForm" action="">
-              <input type="email" id="email" placeholder="Email" required>
-              <input type="text" id="username" placeholder="usesrname" required>
-              <input type="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-            <button type="submit" id="signupbtn" class="btn btn-primary signup">SignUp</button>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="centerForm" id="centerForm2">
+    <form name="registration2" class="signinForm showsignupbox" id="signinForm" >
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="usesrname">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="email">
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" placeholder="password">
+      <button type="submit" class="btn signup" id="signupbtn">Login</button>
+    </form>
   </div>
   <div class="container-fluid recipe-page">
     <div class="row">
@@ -131,6 +102,7 @@
   </footer>
 
   <script src="dishes-app.js"></script>
+  <script src="dishes-appjs.js"></script>
   <script src="dishes-controller.js"></script>
   <script src="dishes-services.js"></script>
 </body>
