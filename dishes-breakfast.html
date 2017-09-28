@@ -84,11 +84,11 @@
           <div class="tab-pane fade in active">
             <div class="row breakfast-row">
               <div ng-repeat="breakfast in breakfastitems | filter:filtText">
-                <div class="thumbnail item" ng-controller = "dialogController">
+                <div class="thumbnail item" ng-controller = "dialogController" ng-click = "showTabDialog($event)">
                   <a href="#/{{breakfast._id}}">
                     <img src="{{breakfast.image}}">
                   </a>
-                  <div class="caption" ng-click = "showTabDialog($event)">
+                  <div class="caption">
                     <h3 class="name">{{breakfast.name}}</h3>
                     <p class="description">{{breakfast.description}}</P>
                   </div>
@@ -114,13 +114,13 @@
       <md-tabs md-dynamic-height md-border-bottom>
         <md-tab label="Ingredients">
           <md-content class="md-padding">
-            <h3 class="md-display-2">Ingredients</h3>
+            <h3 class="md-display-2" id="md-display-small1">Ingredients</h3>
             <h4 ng-repeat="x in breakfast.detailitem[0].ingredients">{{x.ingredientName}}: {{x.ingredientWeight}}</h4>
           </md-content>
         </md-tab>
         <md-tab label="Steps">
           <md-content class="md-padding">
-            <h3 class="md-display-2">Steps</h3>
+            <h3 class="md-display-2" id="md-display-small2">Steps</h3>
             <ol ><li ng-repeat='x in breakfast.detailitem[1].steps'>{{x.step}}</li></ol>
           </md-content>
         </md-tab>
