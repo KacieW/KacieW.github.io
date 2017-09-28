@@ -19,7 +19,7 @@ body {
 .centerForm{
     position:absolute;
     width: 100%;
-
+    z-index: 10;
 }
 .loginForm, .signinForm{
   box-shadow:  0px 0px 0px 9999px rgba(0, 0, 0, 0.8);
@@ -185,6 +185,7 @@ color: #ff0000;
 #menu {
   padding-right: 4%;
   padding-left: 4%;
+  top: 30px;
 }
 
 .navbar {
@@ -252,8 +253,6 @@ a {
   padding: 15px 15px 0 15px;
 }
 
-
-
 #trySignup {
   float: right;
   display: inline-block;
@@ -269,9 +268,6 @@ a {
 #trySignup:hover, #tryPassword:hover {
   color: #FF7E6B;
 }
-
-
-
 #forgot {
   right: 0;
   position: relative;
@@ -283,7 +279,6 @@ a {
 .container {
   width: 100%;
 }
-
 footer {
   box-sizing: border-box;
   margin-left: 1% 0 2% 5%;
@@ -304,15 +299,22 @@ footer {
 .footerbar p {
   font-size: 8px;
 }
-
-
 /******************Breakfast page***************************/
 
-#breakfast-page, #detail-page {
+#breakfast-page{
   background-color: #0D1B1E;
   overflow: scroll;
+  height: auto !important;
+  color: #F4F1DE;
+}
+.md-dialog-is-showing{
+  max-height: 500% !important;
 }
 
+.md-transition-in{
+  position: fixed ;
+  top:400px ;
+}
 .breakfast-row {
   -webkit-column-width: 20em;
   -webkit-column-gap: 4em;
@@ -468,8 +470,6 @@ p.description {
 #input-name::-webkit-input-placeholder, #yourDescription::-webkit-input-placeholder {
   color: #F4F1DE;
 }
-
-
 /********************************detailImgHero************************************/
 
 .detailImgHero {
