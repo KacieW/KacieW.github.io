@@ -18,42 +18,62 @@
 </head>
 
 <body>
-  <nav id="menu" role="navigation" class="navbar">
-    <div class="container-fluid menu">
-      <div class="navbar-header col-xs-12">
-        <button type='button' class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+  <div class="wrap">
+    <nav id="menu" role="navigation" class="navbar">
+      <div class="container-fluid menu">
+        <div class="navbar-header col-xs-12">
+          <button type='button' class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a class='logo' id='logo' href="#">Shiyuan</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-list-item"><a href="index.html">Home</a></li>
+            <li class="nav-list-item"><a href="project.html">Project</a></li>
+            <li class="nav-list-item"><a href="about.html">About</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li><a class='logo' id='logo' href="#">Shiyuan</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="nav-list-item"><a href="#">Home</a></li>
-          <li class="nav-list-item"><a href="project.html">Project</a></li>
-          <li class="nav-list-item"><a href="about.html">About</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    </nav>
 
-  <div class="container-fluid">
-    <div class='row project-head-row'>
-      <h1 id='about-h1'>About</h1>
-    </div><!--row-->
-</div>
-<footer id="footer-row">
-  <div class='container'>
-    <div class="row">
-      <p id='footer-p'>&copy; Shiyuan Wang 2017</p>
+    <div class="container-fluid">
+      <div class='row about-head-row'>
+        <h1 id='about-h1'>About</h1>
+      </div>
     </div>
+    <div class="container-fluid">
+      <div class="row about-content">
+        <div class="col-xs-12 col-md-12 ">
+          <div class="about-details">
+          <p class="about-para">Hey! I'm Shiyuan. I am a front end developer with 2 years of work experience located in Bay Area, CA.
+          I am professional with web development, includeing HTML, CSS, Javascript and Bootstrap. I Have experince with AngularJs, nodejs
+          and unit testing. Also, I have work experience with Java and SQL.</p>
+          <p class="about-para">Feel free to check <a href="shiyuan-resume.pdf">my resume</a>. If you'd like to contact me,
+            email me <a href="mailto:shiyuan2011@knights.ucf.edu">here</a>.</p>
+          <p class="about-para">You can also find me here:</p>
+          <ul class="socialsites">
+            <li class="social-about"><a class="about-link" href="https://github.com/KacieW" target="_blank">Github</a></li>
+            <li class="social-about"><a class="about-link" href="https://www.linkedin.com/in/shiyuan-wang-64a01164/" target="_blank">Linkedin</a></li>
+            <li class="social-about"><a class="about-link" href="https://twitter.com/kaciewang" target="_blank">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    </div>
+    <footer id="footer-row">
+      <div class='container'>
+        <div class="row">
+          <p id='footer-p'>&copy; Shiyuan Wang 2017</p>
+        </div>
+      </div>
+    </footer>
   </div>
-</footer>
-</div>
-<!-- container-fluid -->
+  <!-- container-fluid -->
 </body>
 
 </html>
