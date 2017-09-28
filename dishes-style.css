@@ -310,7 +310,14 @@ footer {
 .md-dialog-is-showing{
   max-height: 500% !important;
 }
-
+#md-display-small1{
+  line-height: 1.1;
+  font-size: 30px;
+}
+#md-display-small2{
+  line-height: 1.1;
+  font-size: 30px;
+}
 .md-transition-in{
   position: fixed ;
   top:400px ;
